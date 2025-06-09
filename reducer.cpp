@@ -1,15 +1,28 @@
 #include <iostream>
+#include <sstream>
 #include <string>
 
+int main(int argc, char** argv) {
+    int sum = 0;
+    int count = 0;
 
-int main(int argc, char ** argv)
-{
-    size_t count = 0;
     std::string line;
-    while (std::getline(std::cin, line))
-    {
-        count += 1;
+    while (std::getline(std::cin, line)) {
+        int s = 0;
+        int c = 0;
+        std::istringstream is{line};
+
+        is >> s >> c;
+
+        std::cout << s << " " << c << std::endl;
+
+        sum += s;
+        count += c;
     }
-    std::cout << count << std::endl;
+
+    float avg = static_cast<float>(sum) / count;
+
+    std::cout << avg << std::endl;
+
     return 0;
 }
