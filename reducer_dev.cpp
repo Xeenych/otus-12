@@ -24,6 +24,6 @@ int main(int argc, char** argv) {
     float avg_sq = static_cast<float>(sum_sq) / count;
 
     float var = avg_sq - (avg * avg);
-    std::cout << std::sqrt(var) << std::endl;
+    std::cout << var << std::endl;
     return 0;
 }
