@@ -11,18 +11,12 @@ int main(int argc, char** argv) {
         int s = 0;
         int c = 0;
         std::istringstream is{line};
-
         is >> s >> c;
-
-        std::cout << s << " " << c << std::endl;
-
         sum += s;
         count += c;
     }
 
     float avg = static_cast<float>(sum) / count;
-
     std::cout << avg << std::endl;
-
     return 0;
 }
