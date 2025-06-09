@@ -2,11 +2,11 @@
 
 all: bin/mapper bin/reducer
 
-bin/mapper: mapper.cpp
+bin/mapper: mapper.cpp src/record.hpp
 	mkdir -p bin
 	g++ -o $@ mapper.cpp
 
-bin/reducer: reducer.cpp
+bin/reducer: reducer.cpp src/record.hpp
 	mkdir -p bin
 	g++ -o $@ reducer.cpp
 
